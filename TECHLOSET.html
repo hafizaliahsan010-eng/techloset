@@ -1,0 +1,1731 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TECHLOSET</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" integrity="sha512-9usAa10IRO0HhonpyAIVpjrylPvoDwiPUiKdWk5t3PyolY1cOd4DSE0Ga+ri4AuTroPR5aQvXU9xC6qOPnzFeg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <style>
+      body{
+        background: linear-gradient(to top left, rgb(10, 10, 59) 2%, rgb(11, 11, 80) 98%);
+      }
+      nav{
+        background-color: rgba(24, 24, 48, 0.6);
+      }
+      #light:hover{
+        background-color: rgba(175, 170, 170, 0.7);
+        color: white;
+      }
+      .dropdown-item{
+        background-color: rgb(5, 5, 77);
+        color: white;
+        border: 5px solid rgb(76, 76, 233);
+      }
+      .navbar-toggler{
+        position: absolute;
+        right: 10px;
+        top: 15px;
+        z-index: 9999;
+      }
+      .navbar{
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .navbar{
+        justify-content: center;
+      }
+      .navbar-brand{
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .navbar-nav .nav-link{
+        display: inline-block;
+        padding: 8px 15px;
+        border-radius: 20px;
+        margin: 5px 0;
+    }
+    .navbar-nav{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      .navbar-nav{
+        margin: 0 auto;
+      }
+      .dropdown:hover .dropdown-menu{
+        display: block;
+      }
+      .dropdown-toggle::after{
+        transition: transform 0.2s;
+      }
+      .dropdown:hover .dropdown-toggle::after{
+        transform: rotate(180deg);
+      }
+      @media (min-width: 992px){
+        .dropdown:hover .dropdown-menu{
+            display: block;
+            margin-top: 0;
+        }
+      }
+      #button5:hover{
+        background-color: rgb(79, 175, 207);
+        color: black;
+      }
+      #button5{
+        background-color: rgb(39, 39, 102);
+        color: white;
+        padding: 14px 18px;
+        transform: rotate(270deg);
+        font-size: 20px;
+        margin-left: -34%;
+        z-index: 999;
+      }
+      .myimage{
+        animation: move 3s ease-in-out infinite;
+      }
+      @keyframes move {
+        0%{transform: translateY(0);}
+        50%{transform: translateY(-20px);}
+        100%{transform: translateY(0);}
+      }
+      .logo-container{
+        overflow: hidden;
+        white-space: nowrap;
+        background-color: rgb(77, 77, 168);
+        width: 100%;
+        padding: 50px 0;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      }
+      .logo-strip{
+        display: inline-block;
+        animation: scrollLeft 60s linear infinite;
+      }
+      .logo-strip img{
+        height: 60px;
+        margin: 0 80px;
+        vertical-align: middle;
+      }
+      @keyframes scrollLeft {
+      0%   { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+      }
+      .back{
+        position: relative;
+        overflow: hidden;
+        border: 3px solid rgb(136, 136, 189);
+      }
+      .back::before{
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS1BYQY5yulnyFGqd9Rz3tdTCdkBgVxpujEag&s')
+        no-repeat center/cover;
+        filter: opacity(0.1);
+        z-index: -1;
+      }
+      .back .content{
+        position: relative;
+        z-index: 1;
+        color: white;
+      }
+      .aj{
+        border: 2px solid rgb(136, 136, 219);
+        height: 240px;
+        display: flex;
+        flex-direction: column;
+        /* display: block; */
+        /* position: absolute; */
+        background-color: rgb(73, 65, 65);
+      }
+      .main{
+        overflow: hidden;
+        height: 650px;
+        /* position: relative; */
+      }
+      .aj{
+        animation: scrollup 5s linear infinite;
+      }
+      @keyframes scrollup {
+        0%   { transform: translatey(0); }
+      100% { transform: translatey(-50%); }
+      }
+      .main:hover .aj{
+        animation-play-state: paused;
+      }
+      @media screen and (min-width: 340px){
+      #myimage1{
+      height: 300px;
+      width: 350px;
+          }
+      }
+      @media screen and (min-width: 1280px){
+      #myimage1{
+      height: 400px;
+      width: 500px;
+          }
+      }
+      @media screen and (min-width: 340px){
+      .res{
+      font-size: 15px;
+          }
+      }
+      @media screen and (min-width: 1280px){
+      .res{
+      font-size: 25px;
+          }
+      }
+      @media screen and (min-width: 340px){
+      .logo-strip #ahsan{
+      height: 30px;
+      margin: 0 30px;
+          }
+      }
+      @media screen and (min-width: 1280px){
+      .logo-strip #ahsan{
+      height: 60px;
+      margin: 0 80px;
+          }
+      }
+      @media screen and (min-width: 340px){
+      .aj{
+      height: 300px;
+      width: 95%;
+          }
+      }
+      @media screen and (min-width: 1280px){
+      .aj{
+      height: auto;
+      width: 100%;
+          }
+      }
+      .smith{
+      background-color: none;
+      padding: 10px 16px;
+      margin-top: 15px;
+      border-bottom: 1px solid white;
+      position: relative;
+      cursor: pointer;
+      }
+
+      .smith1 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+
+      .icon {
+      display: flex;
+      align-items: center;
+      }
+
+      .dropdown-content {
+      margin-top: 10px;
+      display: none;
+      font-size: 14px;
+      color: #444;
+      }
+
+      .dropdown-content.active {
+      display: block;
+      }
+
+      .smith2{
+      background-color: none;
+      padding: 10px 16px;
+      margin-top: 15px;
+      border-bottom: 1px solid white;
+      position: relative;
+      cursor: pointer;
+      }
+
+      .smith3 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+
+      .icon1 {
+      display: flex;
+      align-items: center;
+      }
+
+      .dropdown-content1 {
+      margin-top: 10px;
+      display: none;
+      font-size: 14px;
+      color: #444;
+      }
+
+      .dropdown-content1.active {
+      display: block;
+      }
+
+      .smith4{
+      background-color: none;
+      padding: 10px 16px;
+      margin-top: 15px;
+      border-bottom: 1px solid white;
+      position: relative;
+      cursor: pointer;
+      }
+
+      .smith5 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+
+      .icon2 {
+      display: flex;
+      align-items: center;
+      }
+
+      .dropdown-content2 {
+      margin-top: 10px;
+      display: none;
+      font-size: 14px;
+      color: #444;
+      }
+
+      .dropdown-content2.active {
+      display: block;
+      }
+
+      .smith6{
+      background-color: none;
+      padding: 10px 16px;
+      margin-top: 15px;
+      border-bottom: 1px solid white;
+      position: relative;
+      cursor: pointer;
+      }
+
+      .smith7 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+
+      .icon3 {
+      display: flex;
+      align-items: center;
+      }
+
+      .dropdown-content3 {
+      margin-top: 10px;
+      display: none;
+      font-size: 14px;
+      color: #444;
+      }
+
+      .dropdown-content3.active {
+      display: block;
+      }
+
+      .smith8{
+      background-color: none;
+      padding: 10px 16px;
+      margin-top: 15px;
+      border-bottom: 1px solid white;
+      position: relative;
+      cursor: pointer;
+      }
+
+      .smith9 {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      }
+
+      .icon4 {
+      display: flex;
+      align-items: center;
+      }
+
+      .dropdown-content4 {
+      margin-top: 10px;
+      display: none;
+      font-size: 14px;
+      color: #444;
+      }
+
+      .dropdown-content4.active {
+      display: block;
+      }
+      .noor:hover{
+        background-color: lightseagreen;
+      }
+      .wrapper{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      /* @media screen and (min-width: 1024px){
+        .noor4{
+          width: 100%;
+          padding: 5px;
+        }
+        .noor{
+          font-size: 15px;
+        }
+      } */
+       .noor4{
+        width: 60%;
+       }
+       @media screen and (min-width: 340px){
+        .noor4{
+          width: 10%;
+        }
+        .blink{
+          height: 40px;
+          width: 40px;
+        }
+        .blink1{
+          height: 40px;
+          width: 40px;
+        }
+        .blink2{
+          height: 40px;
+          width: 40px;
+        }
+        .blink3{
+          height: 40px;
+          width: 40px;
+        }
+        .blink4{
+          height: 40px;
+          width: 40px;
+        }
+        .blink5{
+          height: 40px;
+          width: 40px;
+        }
+        .blink6{
+          height: 40px;
+          width: 40px;
+        }
+        .blink7{
+          height: 40px;
+          width: 40px;
+        }
+        .blink8{
+          height: 40px;
+          width: 40px;
+        }
+        .blink9{
+          height: 40px;
+          width: 40px;
+        }
+        .blink10{
+          height: 40px;
+          width: 40px;
+        }
+        button.noor{
+          font-size: 10px;
+          padding: 2px;
+        }
+        .noor4{
+          padding: 5px;
+        }
+       }
+       @media screen and (min-width: 1280px){
+        .noor4{
+          width: 60%;
+        }
+        .blink{
+          height: 100px;
+          width: 100px;
+        }
+        .blink1{
+          height: 100px;
+          width: 100px;
+        }
+        .blink2{
+          height: 100px;
+          width: 100px;
+        }
+        .blink3{
+          height: 100px;
+          width: 100px;
+        }
+        .blink4{
+          height: 100px;
+          width: 100px;
+        }
+        .blink5{
+          height: 100px;
+          width: 100px;
+        }
+        .blink6{
+          height: 100px;
+          width: 100px;
+        }
+        .blink7{
+          height: 100px;
+          width: 100px;
+        }
+        .blink8{
+          height: 100px;
+          width: 100px;
+        }
+        .blink9{
+          height: 100px;
+          width: 100px;
+        }
+        .blink10{
+          height: 100px;
+          width: 100px;
+        }
+        button.noor{
+          font-size: 25px;
+          padding: 5px;
+        }
+        .noor4{
+          padding: 30px;
+        }
+       }
+       .blink{
+        animation: show 4s infinite;
+       }
+       @keyframes show {
+        0% {opacity: 1;}
+        50% {opacity: 0;}
+        100% {opacity: 1;}
+       }
+       .blink1{
+        animation: meer 6s infinite;
+       }
+       @keyframes  meer {
+        0% {opacity: 1;}
+        50% {opacity: 0;}
+        100% {opacity: 1;}
+       }
+       .blink2{
+        animation: show2 10s infinite;
+       }
+       @keyframes show2 {
+        0% {opacity: 1;}
+        50% {opacity: 0;}
+        100% {opacity: 1;}
+       }
+       .blink3{
+        animation: show3 8s infinite;
+       }
+       @keyframes show3 {
+        0% {opacity: 1;}
+        50% {opacity: 0;}
+        100% {opacity: 1;}
+       }
+       .blink4{
+        animation: show4 12s infinite;
+       }
+       @keyframes show4 {
+        0% {opacity: 1;}
+        50% {opacity: 0;}
+        100% {opacity: 1;}
+       }
+       .blink5{
+        animation: show5 8s infinite;
+       }
+       @keyframes show5 {
+        0% {opacity: 1;}
+        50% {opacity: 0;}
+        100% {opacity: 1;}
+       }
+       .blink6{
+        animation: show6 6s infinite;
+       }
+       @keyframes show6 {
+        0% {opacity: 1;}
+        50% {opacity: 0;}
+        100% {opacity: 1;}
+       }
+       .blink7{
+        animation: show7 4s infinite;
+       }
+       @keyframes show7 {
+        0% {opacity: 1;}
+        50% {opacity: 0;}
+        100% {opacity: 1;}
+       }
+       .video-carousel {
+       position: relative;
+       overflow: hidden;   
+       }
+
+      .video-wrapper {
+      display: flex;
+      gap: 15px;
+      transition: transform 0.5s ease-in-out;
+      }
+
+      .video-card {
+      flex: 0 0 25%;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      /* border-radius: 12px; */
+      overflow: hidden;
+      }
+
+     .video-card video {
+      width: 100%;
+     display: block;
+     /* border-radius: 12px; */
+     pointer-events: none;
+     }
+
+
+    .video-card:hover {
+    transform: scale(1.2);
+    z-index: 2;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+    }
+
+    .nav-buttons {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    gap: 12px;
+    }
+
+    .nav-buttons button {
+    padding: 6px 12px;
+    border: rgb(25, 25, 206);
+    background: rgb(15, 15, 49);
+    color: #fff;
+    /* border-radius: 6px; */
+    cursor: pointer;
+    }
+    .video-container{
+      height: 600px;
+      width: 630px;
+      position: relative;
+      overflow: hidden;
+      border: 2px solid rgb(136, 136, 189);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    }
+    .video{
+      width: 100%;
+    }
+    .play-btn{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .play-btn:hover{
+      background-color: rgba(0, 0, 0, 0.8);
+    }
+
+    /* .orbit{
+      position: relative;
+      width: 400px;
+      height: 400px;
+      border-radius: 50%;
+      margin: auto;
+    }
+    .planet{
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      animation: orbit 10s liner infinite;
+    }
+    .strategy{
+      background-color: orange;
+      animation-delay: 0s;
+    }
+    .design{
+      background-color: violet;
+      animation-delay: 2s;
+    }
+    .dev{
+      background-color: green;
+      animation-delay: 4s;
+    }
+    .launch{
+      background-color: blue;
+      animation-delay: 6s;
+    }
+    .support{
+      background-color: cyan;
+      animation-delay: 8s;
+    }
+    .small-ball{
+      position: absolute;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: white;
+      animation: orbit-reverse 8s linear infinite;
+    }
+    .orbit-center-text{
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-weight: bold;
+      color: white;
+    }
+    @keyframes orbit {
+      from { transform: rotate(0deg)
+        translateX(180px) rotate(0deg);}
+      to { transform: rotate(360deg)
+        translateX(180px) rotate(-360deg);}  
+    }
+    @keyframes orbit-reverse {
+      from { transform: rotate(0deg)
+        translateX(180px) rotate(0deg);}
+      to { transform: rotate(360deg)
+        translateX(180px) rotate(-360deg);}
+    } */
+
+      
+    .travis{
+      color: white;
+    }
+    .travis:hover{
+      color: rgb(128, 128, 179);
+      cursor: pointer;
+      text-decoration: underline;
+    }
+  
+    .fab{
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    text-decoration: none;
+    /* margin: 4px 4px; */
+    }
+    .fab:hover{
+    background-color: lightblue;
+    box-shadow: 3px 3px 6px white;
+    }
+    .fab{
+      animation: up 3s linear infinite;
+    }
+    @keyframes up {
+      0% {transform: translateY(0);}
+      50% {transform: translateY(-15px);}
+      100% {transform: translateY(0);}
+    }
+    .fab {
+    padding: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-decoration: none;
+    margin: 4px 4px;
+    }
+    .fab:hover{
+    background-color: lightblue;
+    }
+    .fab-facebook{
+    background-color:  white;
+    color: white;
+    }
+    .fab-twitter{
+    background-color: white;
+    color: white;
+    }
+    .fab-instagram{
+    background-color: white;
+    color: white;
+    }
+    .fab-linkedin{
+    background-color: white;
+    color: white;
+    }
+    .fab-youtube{
+    background-color: white;
+    color: white;
+    }
+
+
+    
+      
+
+
+
+    </style>
+</head>
+<body>
+    
+    <nav class="navbar navbar-expand-lg navbar-dark" style="position: sticky; top: 0; z-index: 5;">
+    <div class="container-fluid">
+            <a class="navbar-brand ms-5" href="#"><span style="color: rgb(154, 154, 236); font-size: 30px; 
+            font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">
+    TECHL<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-bullseye mb-2" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+  <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10m0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12"/>
+  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8"/>
+  <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+</svg>SET</span></a>
+
+      <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse"
+              data-bs-target="#navbarNav" aria-controls="navbarNav"
+              aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto mx-auto">
+          <li class="nav-item mx-3">
+                <a class="nav-link rounded-pill active text-dark bg-info" href="#"><b>Home</b></a>
+        </li>
+        <li class="nav-item mx-3">
+            <a class="nav-link rounded-pill text-light" id="light" href=""><b>Portfolio</b></a>
+        </li>
+          <li class="nav-item mx-3 dropdown">
+            <div class="dropdown">
+            <a href="" class="nav-link rounded-pill text-light dropdown-toggle" role="button" data-bs-toggle="dropdown" id="light"><b>Services</b></a>
+            <ul class="dropdown-menu">
+                <li class="dropdown-item"><a href="" class="text-info text-decoration-none">Mobile App Development</a></li>
+                <li class="dropdown-item"><a href="" class="text-info text-decoration-none">Web App Development</a></li>
+                <li class="dropdown-item"><a href="" class="text-info text-decoration-none">AI Based Solutions</a></li>
+                <li class="dropdown-item"><a href="" class="text-info text-decoration-none">IOT Solutions</a></li>
+                <li class="dropdown-item"><a href="" class="text-info text-decoration-none">SaaS Solutions</a></li>
+                <li class="dropdown-item"><a href="" class="text-info text-decoration-none">DevOps Products</a></li>
+                <li class="dropdown-item"><a href="" class="text-info text-decoration-none">UI/UX Design</a></li>
+                <li class="dropdown-item"><a href="" class="text-info text-decoration-none">Digital Marketing</a></li>
+                <li class="dropdown-item"><a href="" class="text-info text-decoration-none">BlockChain Development</a></li>
+            </ul>
+            </div>        
+        </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link rounded-pill text-light" id="light" href=""><b>Blog</b></a>
+        </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link rounded-pill text-light" id="light" href=""><b>About</b></a>
+        </li>
+          <li class="nav-item mx-3">
+            <a class="nav-link rounded-pill text-light" id="light" href=""><b>Careers</b></a>
+        </li>
+        <li class="nav-item mx-3">
+            <a class="nav-link" href=""><button class="btn btn-info rounded-pill"><b>Let's build together</b></button></a>
+        </li>
+           </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!--software solutions-->
+  <section class="mt-5">
+    <div class="container-fluid">
+      <div class="row" style="align-items: center;">
+        <div class="col-xl-2 col-lg-2 col-md-2 col-sm-2">
+          <!-- <button class="btn rounded-pill" data-bs-toggle="modal" data-bs-target="#myModal" style="position: sticky; top: 0;" id="button5">Get in touch</button> -->
+          <button type="button" class="btn rounded-pill" data-bs-toggle="modal" data-bs-target="#myModal" id="button5">Get in Touch</button>
+
+  <!-- Modal -->
+  <div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content" style="background-color: rgb(11, 11, 59); color: white; border: 3px solid rgb(135, 135, 177);">
+        <div class="modal-header">
+          <h1 class="modal-title">Get in touch <br>
+          <span style="font-size: 20px;">Ready to bring your idea to life? Reach out through the form below, and let's get started. <br></span>
+          <b style="font-size: 20px;">I am interested in!</b> <br>
+          <button class="btn btn-outline-info rounded-pill p-2 btn-sm">Custom Software</button>
+          <button class="btn btn-outline-info rounded-pill p-2 btn-sm">Mobile App</button>
+          <button class="btn btn-outline-info rounded-pill p-2 btn-sm">Web Development</button>
+          <button class="btn btn-outline-info rounded-pill p-2 btn-sm">AI based Solutions</button>
+          <button class="btn btn-outline-info rounded-pill p-2 btn-sm">IoT-based Solutions</button>
+          </h1>
+        </div>
+        <div class="modal-body">
+           <div class="form-floating">
+      <input type="text" class="form-control text-dark" style="border: none; border-bottom: 1px solid white; background-color: rgb(9, 9, 58);" id="name" placeholder="Enter name" name="name" required>
+      <label for="#name">Name</label>
+    </div><br>
+
+    <div class="form-floating">
+      <input type="text" class="form-control text-dark" style="border: none; border-bottom: 1px solid white; background-color: rgb(9, 9, 58);" id="email" placeholder="Enter email" name="email" required>
+      <label for="#email">Email</label>
+    </div><br>
+
+    <div class="form-floating">
+      <input type="number" class="form-control text-dark" style="border: none; border-bottom: 1px solid white; background-color: rgb(9, 9, 58);" id="phone" placeholder="Enter number" name="number" required>
+      <label for="#phone">Phone</label>
+    </div><br>
+
+    <div class="form-floating">
+      <input type="text" class="form-control text-light" style="border: none; border-bottom: 1px solid white; background-color: rgb(9, 9, 58); height: 200px;" id="message" placeholder="Enter message" name="message">
+      <label for="#message">Message</label>
+    </div><br>
+
+    <button class="btn btn-info rounded-pill">Send Message</button><br><br>
+    <h4 style="color: white;">We look forward to hear from you!</h4>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-light" data-bs-dismiss="modal">Close</button>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+          </div>
+          <div class="col">
+        <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12">
+          <div style="color: white;">
+    <h1 style="font-size: 50px;"><b>Next-Gen <span style="border: 1px solid rgb(136, 136, 192); padding: 5px; border-radius: 50%;">Custom</span> Software Solutions</b></h1>
+  </div>
+  </div><!--first-->
+
+  <div class="col-xl-10 col-lg-10 col-md-12 col-sm-12">
+    <div style="color: white;">
+      <p>Scalable web and mobile app solutions tailored for business, ensuring performances, security and seamless user experience.</p>
+    </div>
+  </div>
+  </div><!--col-->
+
+  <div class="col-xl-5 col-lg-5 col-md-12 col-sm-12">
+   <div class="myimage overflow-hidden">
+  <img src="https://templates.hibotheme.com/aixio/default/assets/img/hero/hero-img-2.png" id="myimage1" alt="" height="400" width="500">
+   </div>
+  </div>
+
+   <script>
+    const img = document.getElementById("myimage1");
+
+    document.addEventListener("mousemove", function (e){
+    
+      const centerX = window.innerWidth / 2;
+      const centerY = window.innerHeight / 2;
+
+      const offsetX = (e.clientX - centerX) / 10; 
+      const offsetY = (e.clientY - centerY) / 10; 
+
+      img.style.transform = `translate(${offsetX}px, ${offsetY}px)`;
+    });
+
+    document.addEventListener("mouseleave", function() {
+      img.style.transform = "translate(0, 0)";
+    });
+  </script>
+   </div><!--row-->
+
+   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+    <div class="text-center" style="max-width: 80%;">
+      <button class="btn btn-primary text-light fw-bold p-2 rounded-pill"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="white" class="bi bi-play-circle mx-1" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+  <path d="M6.271 5.055a.5.5 0 0 1 .52.038l3.5 2.5a.5.5 0 0 1 0 .814l-3.5 2.5A.5.5 0 0 1 6 10.5v-5a.5.5 0 0 1 .271-.445"/>
+</svg>Discover Us</button>
+    </div>
+   </div>
+
+   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+    <div class="text-center" style="max-width: 55%;">
+      <h6 style="color: white; font-family:cursive;">Why Choose Techloset<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="white" class="bi bi-arrow-up-right mb-2" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+</svg></h6>
+    </div>
+   </div>
+    </div><!--container-->
+  </section>
+
+<!--brand section-->
+<section class="py-5">
+<div class="logo-container">
+  <div class="logo-strip">
+    <img src="https://templates.hibotheme.com/aixio/default/assets/img/brand/brand-7.svg" alt="" id="ahsan">
+    <img src="https://templates.hibotheme.com/aixio/default/assets/img/brand/brand-8.svg" alt="" id="ahsan">
+    <img src="https://templates.hibotheme.com/aixio/default/assets/img/brand/brand-1.svg" alt="" id="ahsan">
+    <img src="https://templates.hibotheme.com/aixio/default/assets/img/brand/brand-3.svg" alt="" id="ahsan">
+    <img src="https://templates.hibotheme.com/aixio/default/assets/img/brand/brand-4.svg" alt="" id="ahsan">
+    <img src="https://templates.hibotheme.com/aixio/default/assets/img/brand/brand-2.svg" alt="" id="ahsan">
+    <img src="https://templates.hibotheme.com/aixio/default/assets/img/brand/brand-5.svg" alt="" id="ahsan">
+    <img src="https://templates.hibotheme.com/aixio/default/assets/img/brand/brand-6.svg" alt="" id="ahsan">
+
+    <img src="https://templates.hibotheme.com/aixio/default/assets/img/brand/brand-7.svg" alt="" id="ahsan">
+    <img src="https://templates.hibotheme.com/aixio/default/assets/img/brand/brand-8.svg" alt="" id="ahsan">
+    <img src="https://templates.hibotheme.com/aixio/default/assets/img/brand/brand-1.svg" alt="" id="ahsan">
+    <img src="https://templates.hibotheme.com/aixio/default/assets/img/brand/brand-3.svg" alt="" id="ahsan">
+    <img src="https://templates.hibotheme.com/aixio/default/assets/img/brand/brand-4.svg" alt="" id="ahsan">
+    <img src="https://templates.hibotheme.com/aixio/default/assets/img/brand/brand-2.svg" alt="" id="ahsan">
+    <img src="https://templates.hibotheme.com/aixio/default/assets/img/brand/brand-5.svg" alt="" id="ahsan">
+    <img src="https://templates.hibotheme.com/aixio/default/assets/img/brand/brand-6.svg" alt="" id="ahsan">
+  </div>
+</div><!--container-->
+</section>
+
+<section class="py-5">
+<div class="container">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="text-center">
+  <h1 style="color: white; font-size: 55px;"><b>Tailored</b> <span style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Services</span></h1>
+  </div>
+</div>
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="text-center">
+  <h1 style="color: white; font-size: 55px;"><b>For Every</b> <span style="font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Vision</span></h1>
+  </div>
+</div>
+</div>
+</section>
+
+<section class="py-4">
+<div class="container-fluid">
+<div class="row">
+  <div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+  <div style="background-color: rgb(29, 29, 70); padding: 12px; box-shadow: 1px 1px 7px darkslategrey;">
+<h5 style="color: white; margin-top: 15px;">Mobile App Development</h5>
+<p style="color: white;">We build high-performance mobile apps for iOS and Android, focusing on custom mobile application development and user engagement.</p>
+<button class="btn btn-lg btn-outline-info rounded-circle mt-4"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue" class="bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></button>
+  </div>
+</div>
+
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+  <div style="background-color: rgb(29, 29, 70); padding: 12px; box-shadow: 1px 1px 7px darkslategrey;">
+<h5 style="color: white; margin-top: 15px;">Website Development</h5>
+<p style="color: white;">Custom web application development services designed for speed, security & SEO optimization, ensuring maximum online visibility & performance.</p>
+<button class="btn btn-lg btn-outline-info rounded-circle mt-4"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue" class="bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></button>
+  </div>
+</div>
+
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+  <div style="background-color: rgb(29, 29, 70); padding: 12px; box-shadow: 1px 1px 7px darkslategrey;">
+<h5 style="color: white; margin-top: 15px;">AI Based Solutions</h5>
+<p style="color: white;">Leverage enterprise AI solutions to fully automate business processes, improve decision-making & enhance customers interactions with cutting-edge systems.</p>
+<button class="btn btn-lg btn-outline-info rounded-circle mt-4"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue" class="bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></button>
+  </div>
+</div>
+
+<div class="col-xl-3 col-lg-6 col-md-6 col-sm-12">
+  <div style="background-color: rgb(29, 29, 70); padding: 12px; box-shadow: 1px 1px 7px darkslategrey;">
+<h5 style="color: white; margin-top: 15px;">IoT-Based Solutions</h5>
+<p style="color: white;">Integrate IoT-based solutions into your business operations to automate data collection & remote device control for optimized performance.</p>
+<button class="btn btn-lg btn-outline-info rounded-circle mt-4"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="blue" class="bi bi-arrow-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+</svg></button>
+  </div>
+</div>
+</div><!--row-->
+</div><!--container-->
+</section>
+
+<section class="py-5">
+  <div class="container">
+    <div class="text-center">
+    <h1 style="font-size: 55px; color: white; text-shadow: 2px 2px 2px white;"><b>CASE STUDIO</b></h1>
+    </div>
+  </div>
+
+</section>
+
+<section>
+  <div class="container">
+<div class="row">
+<div class="col-xl-9 col-lg-9 col-md-5 col-sm-3 col-5">
+  <div style="border-left: 6px solid rgb(18, 118, 151);">
+    <h3 style="color: white; margin-left: 5px;" class="res">Featured Projects</h3>
+  </div>
+</div>
+
+<div class="col-xl-3 col-lg-3 col-md-6 col-sm-3 col-7">
+  <div>
+    <button class="btn btn-outline-info rounded-pill">View more work<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="blue" class="bi bi-arrow-up-right" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M14 2.5a.5.5 0 0 0-.5-.5h-6a.5.5 0 0 0 0 1h4.793L2.146 13.146a.5.5 0 0 0 .708.708L13 3.707V8.5a.5.5 0 0 0 1 0z"/>
+</svg></button>
+  </div>
+</div>
+</div><!--row-->
+</div><!--container-->
+</section>
+
+<div class="video-carousel py-5">
+  <!-- Navigation buttons -->
+  <div class="nav-buttons">
+    <button id="prevBtn" class="btn btn-lg rounded-circle btn-outline-info"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-caret-left" viewBox="0 0 16 16">
+  <path d="M10 12.796V3.204L4.519 8zm-.659.753-5.48-4.796a1 1 0 0 1 0-1.506l5.48-4.796A1 1 0 0 1 11 3.204v9.592a1 1 0 0 1-1.659.753"/>
+</svg></button>
+    <button id="nextBtn" class="btn btn-lg btn-outline-info rounded-circle"><svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" class="bi bi-caret-right" viewBox="0 0 16 16">
+  <path d="M6 12.796V3.204L11.481 8zm.659.753 5.48-4.796a1 1 0 0 0 0-1.506L6.66 2.451C6.011 1.885 5 2.345 5 3.204v9.592a1 1 0 0 0 1.659.753"/>
+</svg></button>
+  </div>
+
+  <!-- Video container -->
+  <div class="video-wrapper">
+    <div class="video-card rounded-4" style="border: 2px solid rgb(134, 134, 177);">
+      <video src="https://techloset.cdn.prismic.io/techloset/Z1rSRJbqstJ98ZP8_mica-beauty.mp4" muted preload="metadata"></video>
+    </div>
+    <div class="video-card rounded-4" style="border: 2px solid rgb(134, 134, 177);">
+      <video src="https://techloset.cdn.prismic.io/techloset/Z1rR7ZbqstJ98ZPK_oxyversa.mp4" muted preload="metadata"></video>
+    </div>
+    <div class="video-card rounded-4" style="border: 2px solid rgb(134, 134, 177);">
+      <video src="https://techloset.cdn.prismic.io/techloset/Z1rSlZbqstJ98ZQP_co-carting.mp4" muted preload="metadata"></video>
+    </div>
+    <div class="video-card rounded-4" style="border: 2px solid rgb(134, 134, 177);">
+      <video src="https://techloset.cdn.prismic.io/techloset/Z9QKIRsAHJWomifZ_go-grocer.mp4" muted preload="metadata"></video>
+    </div>
+    <div class="video-card rounded-4" style="border: 2px solid rgb(134, 134, 177);">
+      <video src="https://techloset.cdn.prismic.io/techloset/Z1rMBpbqstJ98ZF8_zipzap.mp4" muted preload="metadata"></video>
+    </div>
+    <div class="video-card rounded-4" style="border: 2px solid rgb(134, 134, 177);">
+      <video src="https://techloset.cdn.prismic.io/techloset/Z1rR7ZbqstJ98ZPK_oxyversa.mp4" muted preload="metadata"></video>
+    </div>
+    <div class="video-card rounded-4" style="border: 2px solid rgb(134, 134, 177);">
+      <video src="https://techloset.cdn.prismic.io/techloset/Z9QlRBsAHJWomiwd_tentrum-ai.mp4" muted preload="metadata"></video>
+    </div>
+    <!-- more videos ... -->
+  </div>
+</div>
+
+<script>
+
+const videos = document.querySelectorAll(".video-card video");
+
+// Play on hover
+videos.forEach(video => {
+  video.parentElement.addEventListener("mouseenter", () => {
+    video.play();
+  });
+  video.parentElement.addEventListener("mouseleave", () => {
+    video.pause();
+    video.currentTime = 0;
+  });
+});
+
+// Carousel logic
+const wrapper = document.querySelector(".video-wrapper");
+let currentIndex = 0;
+
+document.getElementById("nextBtn").addEventListener("click", () => {
+  if (currentIndex < videos.length - 4) {
+    currentIndex++;
+    wrapper.style.transform = `translateX(-${currentIndex * 25}%)`;
+  }
+});
+
+document.getElementById("prevBtn").addEventListener("click", () => {
+  if (currentIndex > 0) {
+    currentIndex--;
+    wrapper.style.transform = `translateX(-${currentIndex * 25}%)`;
+  }
+});
+</script>
+
+
+<section class="py-5">
+  <div class="container">
+ <div class="back rounded-5" style="box-shadow: 5px 5px 40px lightblue;">
+  <div class="content">
+   <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+     <div class="text-center">
+       <h1 style="font-weight: bold; color: white;" class="pt-5">Your Success is Our Story,</h1>
+      </div>
+    </div>
+    
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+      <div class="text-center">
+        <h1 style="color: white;">Proven in Numbers</h1>
+      </div>
+    </div>
+
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+      <div class="text-center">
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="white" class="bi bi-arrow-down-left" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M2 13.5a.5.5 0 0 0 .5.5h6a.5.5 0 0 0 0-1H3.707L13.854 2.854a.5.5 0 0 0-.708-.708L3 12.293V7.5a.5.5 0 0 0-1 0z"/>
+</svg></span>
+      </div>
+    </div>
+
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+      <div class="text-center">
+        <button class="btn btn-info rounded-pill p-3 text-light"><b>Create Your Story</b></button>
+      </div>
+    </div>
+
+    <div class="row pt-5 mt-5 px-5">
+   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+    <div class="text-light">
+      <h1 style="font-size: 50px;"><b>400+</b></h1>
+      <h5><b>Solutions Delievered</b></h5>
+    </div>
+   </div>
+
+   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+    <div class="text-light">
+      <h1 style="font-size: 50px;"><b>15+</b></h1>
+      <h5><b>Years of driving growth</b></h5>
+    </div>
+   </div>
+
+   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+    <div class="text-light">
+      <h1 style="font-size: 50px;"><b>95%</b></h1>
+      <h5><b>Customer Satisfaction</b></h5>
+    </div>
+   </div>
+
+   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+    <div class="text-light">
+      <h1 style="font-size: 50px;"><b>15+</b></h1>
+      <h5>Industries Serverd</h5>
+    </div>
+   </div>
+   <span class="mt-4" style="border-bottom: 3px solid white; width: 95%;"></span>
+
+   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+    <div>
+      <img src="ChatGPT Image Aug 28, 2025, 02_18_25 PM.png" alt="" style="margin-top: -40px; margin-left: -50px;" height="300" width="400">
+    </div>
+   </div>
+
+   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+    <div>
+      <img src="ChatGPT Image Aug 28, 2025, 02_18_25 PM.png" alt="" style="margin-top: -40px; margin-left: -50px;" height="300" width="400">
+    </div>
+   </div>
+
+   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+    <div>
+      <img src="ChatGPT Image Aug 28, 2025, 02_18_25 PM.png" alt="" style="margin-top: -40px; margin-left: -50px;" height="300" width="400">
+    </div>
+   </div>
+
+   <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
+    <div>
+      <img src="ChatGPT Image Aug 28, 2025, 02_18_25 PM.png" alt="" style="margin-top: -40px; margin-left: -50px;" height="300" width="400">
+    </div>
+   </div>
+
+    </div><!--row-->
+    </div>
+  </div><!--back-->
+  </div><!--container--> 
+</section>
+
+<section class="py-5">
+<div class="container-fluid">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="text-center">
+    <h1 style="font-size: 60px; color: white;"><b>Trusted By Innovation</b></h1>
+  </div>
+</div>
+
+<div class="row">
+
+  <div class="col">
+ <div class="main mt-4">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="aj rounded-4 mt-3">
+  <p class="p-3" style="color: white; font-size: 20px;"><b>Techloset delivered exceptional custom software solutions with remarkable precision. We are willing that your experience will be brilliant.</b></p>
+  <h5 style="color: white; font-weight: bold;"><svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="white" class="bi bi-person-circle bg-info mx-3" style="border-radius: 50%;" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+</svg>WorkScolar. Inc<span style="font-size: 15px; margin-left: 20px;">Organization</span></h5>
+  </div>
+</div>
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="aj rounded-4 mt-3">
+  <p class="p-3" style="color: white; font-size: 20px;"><b>Excellent React Native mobile developers and delivered excellent work on our development project and I enjoyed working with them.</b></p>
+  <h5 style="color: white; font-weight: bold;"><svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="white" class="bi bi-person-circle bg-info mx-3" style="border-radius: 50%;" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+</svg>Ganesh Tangeela<span style="font-size: 15px; margin-left: 20px;">CEO</span></h5>
+  </div>
+</div>
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="aj rounded-4 mt-3">
+  <p class="p-3" style="color: white; font-size: 20px;"><b>What amazed me most was how Techloset listened. Their custom software development felt personal, almost like they were part of our team.</b></p>
+  <h5 style="color: white; font-weight: bold;"><svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="white" class="bi bi-person-circle bg-info mx-3" style="border-radius: 50%;" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+</svg>Markus Bencher<span style="font-size: 15px; margin-left: 20px;">Founder 89 steps</span></h5>
+  </div>
+</div>
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="aj rounded-4 mt-3">
+  <p class="p-3" style="color: white; font-size: 20px;"><b>Techloset’s ability to craft AI-driven solutions was remarkable. Their AI software development services brought our vision to life effortlessly.</b></p>
+  <h5 style="color: white; font-weight: bold;"><svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="white" class="bi bi-person-circle bg-info mx-3" style="border-radius: 50%;" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+</svg>John Smith<span style="font-size: 15px; margin-left: 20px;">Organization</span></h5>
+  </div>
+</div>
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="aj rounded-4 mt-3">
+  <p class="p-3" style="color: white; font-size: 20px;"><b>From start to finish, Techloset’s AI software development services were seamless. They truly understood our needs and built something incredible.</b></p>
+  <h5 style="color: white; font-weight: bold;"><svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="white" class="bi bi-person-circle bg-info mx-3" style="border-radius: 50%;" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+</svg>Jack<span style="font-size: 15px; margin-left: 20px;">Organization</span></h5>
+  </div>
+</div>
+
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="aj rounded-4 mt-3">
+  <p class="p-3" style="color: white; font-size: 20px;"><b>Techloset delivered exceptional custom software solutions with remarkable precision. We are willing that your experience will be brilliant.</b></p>
+  <h5 style="color: white; font-weight: bold;"><svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="white" class="bi bi-person-circle bg-info mx-3" style="border-radius: 50%;" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+</svg>WorkScolar. Inc<span style="font-size: 15px; margin-left: 20px;">Organization</span></h5>
+  </div>
+</div>
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="aj rounded-4 mt-3">
+  <p class="p-3" style="color: white; font-size: 20px;"><b>Excellent React Native mobile developers and delivered excellent work on our development project and I enjoyed working with them.</b></p>
+  <h5 style="color: white; font-weight: bold;"><svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="white" class="bi bi-person-circle bg-info mx-3" style="border-radius: 50%;" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+</svg>Ganesh Tangeela<span style="font-size: 15px; margin-left: 20px;">CEO</span></h5>
+  </div>
+</div>
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="aj rounded-4 mt-3">
+  <p class="p-3" style="color: white; font-size: 20px;"><b>What amazed me most was how Techloset listened. Their custom software development felt personal, almost like they were part of our team.</b></p>
+  <h5 style="color: white; font-weight: bold;"><svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="white" class="bi bi-person-circle bg-info mx-3" style="border-radius: 50%;" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+</svg>Markus Bencher<span style="font-size: 15px; margin-left: 20px;">Founder 89 steps</span></h5>
+  </div>
+</div>
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="aj rounded-4 mt-3">
+  <p class="p-3" style="color: white; font-size: 20px;"><b>Techloset’s ability to craft AI-driven solutions was remarkable. Their AI software development services brought our vision to life effortlessly.</b></p>
+  <h5 style="color: white; font-weight: bold;"><svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="white" class="bi bi-person-circle bg-info mx-3" style="border-radius: 50%;" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+</svg>John Smith<span style="font-size: 15px; margin-left: 20px;">Organization</span></h5>
+  </div>
+</div>
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="aj rounded-4 mt-3">
+  <p class="p-3" style="color: white; font-size: 20px;"><b>From start to finish, Techloset’s AI software development services were seamless. They truly understood our needs and built something incredible.</b></p>
+  <h5 style="color: white; font-weight: bold;"><svg xmlns="http://www.w3.org/2000/svg" width="66" height="66" fill="white" class="bi bi-person-circle bg-info mx-3" style="border-radius: 50%;" viewBox="0 0 16 16">
+  <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+  <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1"/>
+</svg>Jack<span style="font-size: 15px; margin-left: 20px;">Organization</span></h5>
+  </div>
+</div>
+
+
+ </div><!--main-->
+  </div><!--col-->
+
+
+  
+  <!-- <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
+    <div class="mt-5 video-container rounded-4">
+  <video id="myVideo"
+  poster="thumbnail.jpj">
+  <source src="https://techloset.cdn.prismic.io/techloset/Z9QKIRsAHJWomifZ_go-grocer.mp4" type="https://techloset.cdn.prismic.io/techloset/Z9QKIRsAHJWomifZ_go-grocer.mp4">
+</video>
+<div class="play-btn" onclick="togglePlay()">
+  <svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="lightblue" class="bi bi-play-fill" viewBox="0 0 16 16">
+  <path d="m11.596 8.697-6.363 3.692c-.54.313-1.233-.066-1.233-.697V4.308c0-.63.692-1.01 1.233-.696l6.363 3.692a.802.802 0 0 1 0 1.393"/>
+</svg>
+</div>
+    </div>
+  </div>
+</div>row
+</div>
+container
+
+<script>
+  function togglePlay() {
+    const video = document.getElementById('#myVideo');
+    const playBtn = document.querySelector('.play-btn');
+
+    if (video.paused){
+      video.play();
+      playBtn.style.display = 'none';
+    }
+    else {
+      video.pause();
+      playBtn.style.display = 'block';
+    }
+  } 
+</script> -->
+
+</section>
+<section class="py-5">
+  <div class="container-fluid">
+  <div class="col rounded-5" style="border-top: 2px solid rgb(118, 118, 236); border-bottom: none;">
+    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+      <div class="text-center">
+        <h1 class="mt-5" style="font-size: 60px; color: white;">Frequently Asked Questions</h1>
+      </div>
+    </div>
+  <div class="col-xl-12 col-md-12 col-lg-12 col-sm-12">
+<div class="smith" onclick="toggleDropdown()">
+  <div class="smith1">
+    <div class="icon mt-4">
+      <h2 style="color: white;">What are Custom Software solutions?</h2>
+    </div>
+    <div class="arrow text-info mt-5">▼</div>
+  </div>
+  <div id="dropdown" class="dropdown-content">
+   <p style="font-size: 20px; color: white;">Custom software solutions are tailored applications built to address unique business challenges, ensure sacalability, security, and competetive advantange-unlike generic off-the-shelf tools.</p> 
+  </div>
+</div>
+
+<script>
+  function toggleDropdown() {
+    const dropdown = document.getElementById('dropdown');
+    dropdown.classList.toggle('active');
+  }
+</script>
+
+</div>
+
+<div class="col-xl-12 col-md-12 col-lg-12 col-sm-12">
+<div class="smith2" onclick="toggleDropdown1()">
+  <div class="smith3">
+    <div class="icon1 mt-4">
+      <h2 style="color: white;">Why Choose techloset for custom software development?</h2>
+    </div>
+    <div class="arrow1 text-info mt-5">▼</div>
+  </div>
+  <div id="dropdown1" class="dropdown-content1">
+   <p style="font-size: 20px; color: white;">We specialize in AI-driven, scalable software that aligns with your workflows, integrate seamlessly with existing systems, and delievers measureable ROI-backed by 10 years of enterprise expertise.</p> 
+  </div>
+</div>
+
+<script>
+  function toggleDropdown1() {
+    const dropdown = document.getElementById('dropdown1');
+    dropdown.classList.toggle('active');
+  }
+</script>
+
+</div>
+
+<div class="col-xl-12 col-md-12 col-lg-12 col-sm-12">
+<div class="smith4" onclick="toggleDropdown2()">
+  <div class="smith5">
+    <div class="icon2 mt-4">
+      <h2 style="color: white;">Which industries do you serve with custom software?</h2>
+    </div>
+    <div class="arrow2 text-info mt-5">▼</div>
+  </div>
+  <div id="dropdown2" class="dropdown-content2">
+   <p style="font-size: 20px; color: white;">From healthcare to fintech, we design industry-specific solutions for logisticsSaaS, e-commerce, manufacturing, prioritizing compilance, automation and user centric design.</p> 
+  </div>
+</div>
+
+<script>
+  function toggleDropdown2() {
+    const dropdown = document.getElementById('dropdown2');
+    dropdown.classList.toggle('active');
+  }
+</script>
+
+</div>
+
+<div class="col-xl-12 col-md-12 col-lg-12 col-sm-12">
+<div class="smith6" onclick="toggleDropdown3()">
+  <div class="smith7">
+    <div class="icon3 mt-4">
+      <h2 style="color: white;">How secure are your custom software solutions?</h2>
+    </div>
+    <div class="arrow3 text-info mt-5">▼</div>
+  </div>
+  <div id="dropdown3" class="dropdown-content3">
+   <p style="font-size: 20px; color: white;">We implement enterprise-grade encryption, GDPR/ISO compilanceand penetration testing to safeguard sensitive data, ensuring end-to-end security for every project.</p> 
+  </div>
+</div>
+
+<script>
+  function toggleDropdown3() {
+    const dropdown = document.getElementById('dropdown3');
+    dropdown.classList.toggle('active');
+  }
+</script>
+
+</div>
+
+<div class="col-xl-12 col-md-12 col-lg-12 col-sm-12">
+<div class="smith8" onclick="toggleDropdown4()">
+  <div class="smith9">
+    <div class="icon4 mt-4">
+      <h2 style="color: white;">What is the timeline for custom software development?</h2>
+    </div>
+    <div class="arrow4 text-info mt-5">▼</div>
+  </div>
+  <div id="dropdown4" class="dropdown-content4">
+   <p style="font-size: 20px; color: white;">Timelines vary by complexity, but our agile process deliever MVP -ready solutions in 3-6 months, with iterative updates to align with evolving business need.</p> 
+  </div>
+</div>
+
+<script>
+  function toggleDropdown4() {
+    const dropdown = document.getElementById('dropdown4');
+    dropdown.classList.toggle('active');
+  }
+</script>
+
+</div>
+  </div><!--col-->
+
+</div><!--container-->
+</section>
+
+
+<!-- <section class="py-5 overflow-hidden" style="background: linear-gradient(to bottom, rgb(10, 10, 59) 10%, rgb(174, 218, 233) 50%, rgb(68, 129, 150) 20%);">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 wrapper" style="margin-top: 15%;">
+    <div class="rounded-pill noor4" style="border: 1px solid white; padding: 40px;">
+      <h6 style="color: white; position: absolute; margin-top: -9%;">Naveed Sarwar <br>CEO techloset solutions</h6>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQNfTkosk_XISYGUe8YAUWMrv0kcP5a4YMcVQ&s" alt="" height="100" width="100" class="blink8 rounded-circle" style="position: absolute; margin-top: -80px; margin-left: 100px;">
+      <h6 style="color: white; position: absolute; margin-top: 30%;">Aroma Tariq <br>COO techloset solutions</h6>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQU4g8xUnnDU4kVOp8_-3f3aPDusw_D2AlyXw&s" alt="" height="100" width="100" class="blink9 rounded-circle" style="position: absolute; margin-top: 22%;">
+      <h6 style="color: white; position: absolute; margin-left: 50%; margin-top: 8%;">Umair Arshad <br>CTO techloset solutions</h6>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQAl4FfpvS6GU207mHsTZVCDg75Z0oBrJhLnQ&s" alt="" height="100" width="100" class="blink10 rounded-circle" style="position: absolute; margin-left: 50%;">
+      <h6 class="blink1" style="color: white; position: absolute; margin-top: 8%;">Kneez Fatima <br>Trainee</h6>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTyW2MAFrFnfa_bT1jSttLbmvfotJcqQyCCGg&s" alt="" height="100" width="100" style="position: absolute;" class="rounded-circle blink1">
+      <h6 class="blink3" style="color: white; position: absolute; margin-left: 33%;">Usama Zahoor <br>UI/UX designer</h6>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSTNjkaQHLXfokbl1GiKnXl6v7GNgnG8rb3JA&s" alt="" height="100" width="100" style="position: absolute; margin-left: 25%; margin-top: -3%;" class="rounded-circle blink3">
+      <div class="rounded-pill" style="border: 1px solid white; padding: 40px;">
+        <h6 class="blink" style="color: white; position: absolute; margin-top: 12%; margin-left: -8%;">Muhammad Adnan <br>software developer</h6>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTysBwIksSpPxexd4Pi18pBK5AHgi63orl4OQ&s" alt="" height="100" width="100" class="blink rounded-circle" style="position: absolute; margin-top: 10%;">
+        <h6 class="blink2" style="color: white; position: absolute; margin-left: 16%;">Zainub Raza <br>Trainee</h6>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTN3-b6hE_5K-l4bv_gBuFtF5zWoPEhSkLsuw&s" alt="" height="100" width="100" style="position: absolute; margin-left: 8%; margin-top: -2%;" class="blink2 rounded-circle">
+        <h6 class="blink4" style="color: white; position: absolute; margin-left: 17%; margin-top: 25%;">Ammad Khalid <br>Team Lead</h6>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSEggpHVqWDedhGqOyqh60ah1VdTpdtVAzlRw&s" alt="" height="100" width="100" class="rounded-circle blink4" style="position: absolute; margin-top: 17%; margin-left: 17%;">
+        <div class="rounded-pill" style="border: 1px solid white; padding: 40px;">
+          <h6 class="blink5" style="color: white; position: absolute; margin-left: -20%;">Sheraz Ijaz <br>Sr Software Developer</h6>
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR1wz0j6iNcsEAAUlxR1zS7jElJ8RnGj-74_w&s" alt="" height="100" width="100" class="blink5 rounded-circle" style="position: absolute; margin-left: -14%; margin-top: -2%;">
+          <div class="rounded-pill" style="border: 1px solid white; padding: 40px;">
+            <h6 class="blink6" style="position: absolute; color: white; margin-top: 18%; margin-left: 29%;">Arooj Asif <br>Sr Tech</h6>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT7nstASo8BdadWs3X-ji8e1O0hd5AMByZdGQ&s" alt="" class="blink6 rounded-circle" height="100" width="100" style="position: absolute; margin-top: 15%; margin-left: 21%;">
+            <h6 class="blink7" style="color: white; position: absolute; margin-left: 33%; margin-top: 10%;">Muhammad Hamza <br>Jr developer</h6>
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRij6dtiHizH96qpCOe8WeXXP3yLyQJkPdGVg&s" alt="" class="rounded-circle blink7" height="100" width="100" style="position: absolute; margin-top: 8%; margin-left:41%;">
+      <div class="text-center">
+      <button class="btn btn-light rounded-pill noor" style="font-size: 25px; padding: 35px;"><b>Hire a developer<svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="lightblue" class="bi bi-people-fill mx-3" viewBox="0 0 16 16">
+  <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6m-5.784 6A2.24 2.24 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.3 6.3 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1zM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5"/>
+</svg></b></button>
+      </div>
+      </div>four
+      </div>three
+      </div>two
+    </div>one
+  </div>
+</section> -->
+
+<section class="py-5">
+  <div class="container-fluid">
+    <div class="row">
+<div class="col">
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+    <div class="mt-5">
+      <h2 class="h1 text-info mx-5" style="font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;">TECHL<svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="white" class="bi bi-bullseye mb-2" viewBox="0 0 16 16">
+  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+  <path d="M8 13A5 5 0 1 1 8 3a5 5 0 0 1 0 10m0 1A6 6 0 1 0 8 2a6 6 0 0 0 0 12"/>
+  <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8"/>
+  <path d="M9.5 8a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0"/>
+</svg>SET</h2>
+    </div>
+  </div>
+
+  
+  
+  
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+    <div class="mx-5 mt-5">
+      <h5 style="color: white;">NewsLetter</h5>
+      <div class="input-group">
+        <input class="form-control" type="email" placeholder="Email">
+        <span class="input-group-text bg-info" style="cursor: pointer;">Subscribe</span>
+      </div>
+    </div>
+  </div>
+  
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+    <div class="mx-5">
+      <h6 class="mt-5" style="color: white; text-decoration: underline;">info@techloset.com</h6>
+
+      <h4 class="text-info mt-5">Follow us</h4>
+
+      <div class="social">
+<a href="#" class="fab fa-facebook"></a>
+<a href="#" class="fab fa-twitter"></a>
+<a href="#" class="fab fa-instagram"></a>
+<a href="#" class="fab fa-linkedin"></a>
+<a href="#" class="fab fa-youtube"></a>
+</div>
+</div>
+</div>
+
+</div><!--col-->
+
+<div class="col">
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="mt-5 py-2 mx-5">
+    <h5 class="text-info"><b>Insights</b></h5>
+    
+    <h6 class="travis mt-3">Case study</h6>
+    <h6 class="travis">Careers</h6>
+    <h6 class="travis">Testimonials</h6>
+    <h6 class="travis">Life at Techloset</h6>
+    
+  </div>
+</div>
+ 
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="mt-5 mx-5">
+    <h5 class="text-info">Head Office</h5>
+
+    <h6 style="color: white;">717 k street,STE 207,Sachromento,CA 95814,</h6>
+    <h6 style="color: white;">United State.</h6>
+    <h6 class="travis">Phone : +1(916) 822 7374</h6>
+  </div>
+</div>
+
+
+
+
+
+
+</div><!--col-->
+
+<div class="col">
+
+<div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+  <div class="mt-5 mx-5 py-2">
+    <h5 class="text-info">Services</h5>
+    
+    <h6 class="travis mt-3">Mobile App Development</h6>
+    <h6 class="travis">Web App Development</h6>
+    <h6 class="travis">AI based solutions</h6>
+    <h6 class="travis">IoT-based solutions</h6>
+  </div>
+</div>
+
+
+  <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12">
+    <div class="mt-5 mx-5">
+       <h5 class="text-info">Corporate Office</h5>
+      
+       <h6 style="color: white;">P861 W Canal Rd, Amin Town,</h6>
+       <h6 style="color: white;">Faisalabad, Pakistan</h6>
+       <h6 class="travis">Whatsapp : +92 (327) 87 50005</h6>
+       <h6 class="travis">Landline : +92 (327) 87 50005</h6>
+    </div>
+  </div>
+
+</div><!--col-->
+
+</div><!--row-->
+  </div><!--container-->
+</section>
+</body>
+</html>
+
+
+
+
+<!-- <section class="py-5 mt-5">
+  <div class="workflow-container">
+    <div class="orbit-diagram hidden md:hidden lg:flex">
+      <div class="orbit">
+        <div class="planet strategy" data-label="Strategy"></div>
+
+        <div class="planet design" data-label="Design"></div>
+        <div class="planet dev" data-label="Development & Testing"></div>
+        <div class="planet launch" data-label="Launch"></div>
+        <div class="planet support" data-label="Support"></div>
+
+        <div class="small-ball"></div>
+        <div class="small-ball"></div>
+        <div class="small-ball"></div>
+
+        <div class="orbit-center-text">Hover a ball</div>
+      </div>
+    </div>
+
+<div class="static-list flex flex-col gap-4 lg:hidden">
+  <div class="list-item">
+    <span><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="orange" class="bi bi-circle-fill" viewBox="0 0 16 16">
+  <circle cx="8" cy="8" r="8"/>
+</svg>Strategy</span> Devolp Long-term AI strategies..
+  </div>
+
+  <div class="list-item">
+    <span><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="purple" class="bi bi-circle-fill" viewBox="0 0 16 16">
+  <circle cx="8" cy="8" r="8"/>
+</svg>Design</span> Craft intuitive designs..
+  </div>
+
+  <div class="list-item">
+    <span><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="green" class="bi bi-circle-fill" viewBox="0 0 16 16">
+  <circle cx="8" cy="8" r="8"/>
+</svg>Development & Testing</span> Build robust scalable solutions..
+  </div>
+
+  <div class="list-item">
+    <span><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="blue" class="bi bi-circle-fill" viewBox="0 0 16 16">
+  <circle cx="8" cy="8" r="8"/>
+</svg>Launch</span> Deploy innovative AI software..
+  </div>
+
+  <div class="list-item">
+    <span><svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" fill="white" class="bi bi-circle-fill" viewBox="0 0 16 16">
+  <circle cx="8" cy="8" r="8"/>
+</svg>Support</span> Provide ongoing support..
+  </div>
+</div>
+
+  </div>
+
+  <script>
+
+const planets = document.querySelectorAll('.planet');
+const centerText = document.querySelector('.orbit-center-text');
+const allBalls = document.querySelectorAll('.planet, .small-ball');
+
+planets.forEach(planet =>{
+  planet.addEventListener('mouseenter'
+    ,() => {
+      allBalls.forEach(ball =>
+        ball.style.animationPlayState = 'paused');
+        allBalls.forEach(ball => 
+          ball.style.backgroundColor = 'white');
+          centerText.textContent = planet.dataset.label});
+          planet.addEventListener('mouseleave'
+        ,() => {
+          allBalls.forEach(ball =>
+            ball.style.animationPlayState = 'running');
+            document.querySelector('.strategy').style.backgroundColor = 'orange';
+
+            document.querySelector('.design').style.backgroundColor = 'violet';
+
+            document.querySelector('.dev').style.backgroundColor = 'green';
+
+            document.querySelector('.launch').style.backgroundColor = 'blue';
+
+            document.querySelector('.support').style.backgroundColor = 'cyan';
+
+            centerText.textContent = 'Hover a ball';
+        });
+});
+  </script>
+
+</section> -->
